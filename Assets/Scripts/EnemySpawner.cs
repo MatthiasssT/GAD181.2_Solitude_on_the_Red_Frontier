@@ -14,6 +14,8 @@ public class EnemySpawner : MonoBehaviour
     public float minSpawnDistance = 10f;
     public float buttonCooldown = 5f; // Time in seconds for button cooldown.
     public Button spawnButton; // Reference to the UI button.
+    [SerializeField]
+    private InputManager inputManager;
 
     private int currentWave = 0;
     private int enemiesToSpawn;
