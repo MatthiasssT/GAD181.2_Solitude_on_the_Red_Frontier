@@ -15,7 +15,7 @@ public class EnemySpawner : MonoBehaviour
     public float buttonCooldown = 5f; // Time in seconds for button cooldown.
     public Button spawnButton; // Reference to the UI button.
     [SerializeField]
-    private InputManager inputManager;
+    private PlacementSystem placementSystem;
 
     private int currentWave = 0;
     private int enemiesToSpawn;
@@ -40,7 +40,7 @@ public class EnemySpawner : MonoBehaviour
         {
             return; // Button is still on cooldown, so do nothing.
         }
-
+        placementSystem.StopPlacement();
         Vector3 playerPosition = playerBase.position;
         playerPosition.y = 0;
 

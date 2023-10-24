@@ -45,9 +45,7 @@ public class BasicTurret : MonoBehaviour
         yield return new WaitForSeconds(fireRate);
         GameObject bullet = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         bullet.GetComponent<Bullet>().SetTarget(target);
-        Debug.Log("Shoot");
         isFiring = false;
-        // You may want to set properties on the bullet like damage and target here.
-        // Then, handle the bullet logic in a separate script.
+        
     }
 }

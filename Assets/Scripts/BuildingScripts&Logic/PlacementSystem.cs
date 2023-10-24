@@ -16,9 +16,7 @@ public class PlacementSystem : MonoBehaviour
 
     [SerializeField]
     private GameObject gridVisualization;
-    [SerializeField]
-    //audiosource for cash sfx
-    //private AudioSource source;
+    
 
     private GridData floorData, obstacleData;
     [SerializeField]
@@ -89,7 +87,7 @@ public class PlacementSystem : MonoBehaviour
     //    return selectedData.CanPlaceObjectAt(gridPosition, database.objectsData[selectedObjectIndex].Size);
     //}
 
-    private void StopPlacement()
+    public void StopPlacement()
     {
         if (buildingState == null)
             return;
